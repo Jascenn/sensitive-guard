@@ -97,6 +97,14 @@ STRIPE_SECRET_KEY
 
 ---
 
+## 💎 赞助商
+
+本项目由 [LionCC API](https://lioncc.ai) 提供支持
+
+LionCC API 提供稳定、高性价比的 AI 模型 API 服务，支持 Claude、GPT-4、Gemini 等主流模型。
+
+---
+
 ## 🔧 卸载
 
 ```bash
