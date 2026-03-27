@@ -1,0 +1,24 @@
+{
+  "apiKey": "sk-ant1234567890abcdefghijklmnopqrstuvwxyz1234567890ABCD",
+  "models": {
+    "primary": {
+      "apiKey": "sk-proj1234567890abcdefghijklmnopqrstuvwxyz123456WXYZ",
+      "token": "ghp_1234567890abcdefghijklmnopqrstuvwxyz"
+    }
+  },
+  "channels": {
+    "feishu": {
+      "appId": "cli_a1234567890abcde",
+      "appSecret": "abcd1234567890efghijklmnopqrstuvwxyz",
+      "botToken": "1234567890:ABCdefGHIjklMNOpqrSTUvwxYZ1234567890"
+    },
+    "wechat": {
+      "appId": "wx1234567890abcdef",
+      "secret": "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6"
+    }
+  },
+  "database": {
+    "password": "db_password_1234567890",
+    "secretKey": "secret_key_abcdef1234567890ghijklmn"
+  }
+}

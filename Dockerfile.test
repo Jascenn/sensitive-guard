@@ -1,0 +1,15 @@
+FROM ubuntu:22.04
+
+# 安装基础工具
+RUN apt-get update && apt-get install -y \
+    bash \
+    curl \
+    vim \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+# 设置工作目录
+WORKDIR /test
+
+# 默认使用 bash
+CMD ["/bin/bash"]

@@ -1,0 +1,20 @@
+#!/bin/bash
+# Sensitive Guard - 命令包装器
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+source "$SCRIPT_DIR/lib/core.sh"
+
+init_guard
+
+if [ "$(basename "$0")" = "sgrep" ]; then
+  pattern="$1"
+  shift
+  for file in "$@"; do
+    if [ -f "$file" ]; then
+      desensitize_content "$(cat "$file")" | grep "$pattern"
+    else
+      grep "$pattern" "$@"
+      break
+    fi
+  done
+fi

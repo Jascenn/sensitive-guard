@@ -1,0 +1,18 @@
+#!/bin/bash
+# Sensitive Guard - 命令包装器
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+source "$SCRIPT_DIR/lib/core.sh"
+
+# 初始化
+init_guard
+
+# 包装 cat 命令
+if [ "$(basename "$0")" = "scat" ]; then
+  file="$1"
+  if [ -f "$file" ]; then
+    desensitize_content "$(cat "$file")"
+  else
+    cat "$@"
+  fi
+fi
