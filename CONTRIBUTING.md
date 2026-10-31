@@ -1,40 +1,34 @@
 # 贡献指南
 
-感谢你对 Sensitive Guard 的关注！
+感谢你对 Sensitive Guard 的关注。
 
-## 如何贡献
+## 报告问题
 
-### 报告 Bug
+- 先检查 [Issues](https://github.com/Jascenn/sensitive-guard/issues) 是否已有相同问题。
+- 使用仓库中的 Issue 模板提交复现步骤、系统和 Shell 版本。
+- 日志、截图和示例配置必须脱敏，不要提交真实密钥。
+- 安全问题请按照 [SECURITY.md](SECURITY.md) 私下报告。
 
-1. 检查 [Issues](https://github.com/yourusername/sensitive-guard/issues) 是否已有相同问题
-2. 使用 Bug 报告模板创建新 Issue
-3. 提供详细的复现步骤和环境信息
+## 提交代码
 
-### 提出功能建议
+1. Fork 本仓库。
+2. 从 `main` 创建短分支，例如 `fix/redact-bearer-token`。
+3. 使用 Conventional Commits，例如 `fix: redact bearer tokens`。
+4. 推送分支并创建 Pull Request。
 
-1. 使用功能请求模板创建 Issue
-2. 描述使用场景和预期效果
-3. 等待社区讨论
+## 本地检查
 
-### 提交代码
+提交前至少运行：
 
-1. Fork 本仓库
-2. 创建特性分支：`git checkout -b feature/your-feature`
-3. 提交变更：`git commit -m 'Add some feature'`
-4. 推送分支：`git push origin feature/your-feature`
-5. 创建 Pull Request
-
-## 代码规范
-
-- 使用 Bash 编写脚本
-- 添加必要的注释
-- 保持代码简洁
-- 遵循现有代码风格
-
-## 测试
-
-提交前请测试：
 ```bash
-bash install.sh
-cat test-file
+find . -type f -name '*.sh' -print0 |
+  while IFS= read -r -d '' file; do bash -n "$file"; done
+python3 -m py_compile fuse/sensitive_fs.py
+git diff --check
 ```
+
+不要提交 `__pycache__`、本地配置、测试输出或真实凭证。
+
+## Pull Request
+
+请说明改动动机、影响范围、验证证据和回滚方式。每个 PR 尽量只解决一个问题。

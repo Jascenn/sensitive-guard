@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Shell](https://img.shields.io/badge/Shell-Bash-green.svg)](https://www.gnu.org/software/bash/)
-[![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Linux-blue.svg)](https://github.com/yourusername/sensitive-guard)
+[![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Linux-blue.svg)](https://github.com/Jascenn/sensitive-guard)
 
 🔒 自动检测并脱敏配置文件中的敏感信息（API Key、Token、密码等）
 
@@ -22,7 +22,7 @@
 ### 一键安装
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/yourusername/sensitive-guard/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Jascenn/sensitive-guard/main/install.sh | bash
 source ~/.zshrc
 ```
 

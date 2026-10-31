@@ -4,7 +4,7 @@
 set -e
 
 INSTALL_DIR="$HOME/.sensitive-guard"
-REPO_URL="https://github.com/yourusername/sensitive-guard"
+REPO_URL="https://github.com/Jascenn/sensitive-guard"
 
 echo "🔒 Sensitive Guard 安装程序"
 echo ""

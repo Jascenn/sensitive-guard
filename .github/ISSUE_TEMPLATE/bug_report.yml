@@ -1,0 +1,43 @@
+name: Bug report
+description: 报告脱敏、安装或兼容性问题
+title: "bug: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请先搜索现有 Issue，并删除日志中的真实密钥、令牌和密码。
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 问题描述
+      description: 实际发生了什么，期望发生什么？
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 安装...
+        2. 执行...
+        3. 看到...
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: 环境
+      description: 操作系统、Shell 和 Bash 版本
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 脱敏后的日志或截图
+      description: 请勿粘贴真实凭证
+    validations:
+      required: false
